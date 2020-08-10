@@ -237,6 +237,8 @@ body {
 
 .header__title__text {
   margin-right: 4rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 @media only screen and (max-width: 26.75em) {
@@ -245,19 +247,55 @@ body {
   }
 }
 
-.header__title__img, .header__title__img--mobile {
+.header__title__text:hover {
+  -webkit-transform: skewY(2deg);
+          transform: skewY(2deg);
+}
+
+.header__title__imgcontainer {
+  position: relative;
+}
+
+.header__title__imgcontainer::before {
+  content: "";
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+  display: block;
   border-radius: 50%;
-  border: 3px solid white;
+  width: 15rem;
+  height: 15rem;
+  opacity: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+@media only screen and (max-width: 26.75em) {
+  .header__title__imgcontainer::before {
+    display: none;
+  }
+}
+
+.header__title__imgcontainer:hover::before {
+  opacity: 1;
+}
+
+.header__title__imgcontainer:hover > *, .header__title__imgcontainer:hover::before {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.header__title__img, .header__title__img--mobile {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
   display: block;
   -webkit-animation: moveinright .7s ease-out;
           animation: moveinright .7s ease-out;
-}
-
-@media only screen and (max-width: 75em) {
-  .header__title__img, .header__title__img--mobile {
-    height: 15rem;
-    width: 15rem;
-  }
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 @media only screen and (max-width: 26.75em) {
@@ -284,6 +322,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: -15rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   -webkit-animation: moveinright .7s ease-out;
           animation: moveinright .7s ease-out;
 }
@@ -294,12 +334,17 @@ body {
   }
 }
 
+.header__subtitle:hover {
+  -webkit-transform: skewY(-2deg);
+          transform: skewY(-2deg);
+}
+
 .header__social {
   width: 70%;
   padding: 2rem;
   margin: 0 auto;
   margin-top: 7rem;
-  border-top: 0.2rem solid var(--color-main-gray-dark);
+  border-top: 0.16rem solid var(--color-main-gray-dark);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,6 +352,27 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 4.5rem;
+}
+
+.header__social > * {
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__social > *:hover {
+  -webkit-transform: skewY(10deg);
+          transform: skewY(10deg);
+  -webkit-perspective: 10deg;
+          perspective: 10deg;
+}
+
+.header__social > *:active, .header__social > *:focus {
+  outline: none;
+  -webkit-transform: skewY(10deg) rotateY(1turn);
+          transform: skewY(10deg) rotateY(1turn);
+  -webkit-perspective: 10deg;
+          perspective: 10deg;
 }
 
 .header__social--git {
