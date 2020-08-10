@@ -177,7 +177,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: .2rem;
-  text-transform: upper;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 75em) {
