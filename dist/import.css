@@ -319,15 +319,28 @@ body {
 .header__social--git {
   -webkit-animation: moveinleft .7s ease-out;
           animation: moveinleft .7s ease-out;
+  @include respond(tablet-land) {
+                height: 12rem;
+                width: 12rem;
+            }
+  
 }
 
 .header__social--repo {
   -webkit-animation: moveinbottom .7s ease-out;
           animation: moveinbottom .7s ease-out;
+  @include respond(tablet-land) {
+                height: 12rem;
+                width: 12rem;
+            }
 }
 
 .header__social--discord {
   -webkit-animation: moveinright .7s ease-out;
           animation: moveinright .7s ease-out;
+  @include respond(tablet-land) {
+                height: 12rem;
+                width: 12rem;
+            }
 }
 /*# sourceMappingURL=import.css.map */
