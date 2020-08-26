@@ -280,12 +280,24 @@ body {
 }
 
 .social__discord {
+  -webkit-animation: moveinbottom .7s ease-out;
+          animation: moveinbottom .7s ease-out;
+}
+
+@media only screen and (max-width: 46.25em) {
+  .social__discord {
+    height: 12rem;
+    width: 12rem;
+  }
+}
+
+.social__insta {
   -webkit-animation: moveinright .7s ease-out;
           animation: moveinright .7s ease-out;
 }
 
 @media only screen and (max-width: 46.25em) {
-  .social__discord {
+  .social__insta {
     height: 12rem;
     width: 12rem;
   }
